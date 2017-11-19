@@ -1,0 +1,14 @@
+{
+    "name": "edersoares/nix-query-builder",
+    "description": "A easy SQL builder in PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eder Soares",
+            "email": "edersoares@me.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
