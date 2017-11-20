@@ -55,7 +55,13 @@ class Builder implements Statement
             }
         }
 
-        return $stm;
+        return str_replace([
+            '1 = 1 AND ',
+            '1 = 1 OR ',
+        ], [
+            '',
+            ''
+        ], $stm);
     }
 
     public function getParameters()

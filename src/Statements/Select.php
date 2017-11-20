@@ -43,15 +43,17 @@ class Select implements Statement
      */
     protected function escapeColumn($column)
     {
+        $column = strtolower($column);
+
         if ($column === '*') {
             return $column;
         }
 
-        if (strpos(strtolower($column), ' as ')) {
+        if (strpos($column, ' as ')) {
 
             $parts = explode(' as ', $column);
 
-            return "`{$parts[0]}` as `{$parts[1]}`";
+            return "`{$parts[0]}` AS `{$parts[1]}`";
         }
 
         if (is_string($column)) {

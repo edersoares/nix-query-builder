@@ -9,7 +9,7 @@ class ComplexSelectQueryTest extends TestCase
 {
     public function testComplexSelect()
     {
-        $sql = 'SELECT `id`, `name` as `first_name` FROM `users` WHERE 1 = 1 AND `id` = ?';
+        $sql = 'SELECT `id`, `name` AS `first_name` FROM `users` WHERE `id` = ?';
 
         $builder = new Builder();
 
