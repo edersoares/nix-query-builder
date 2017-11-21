@@ -45,7 +45,7 @@ class SelectTest extends TestCase
 
     public function testSelectWithAlias()
     {
-        $sql = 'SELECT `id`, `name` as `other_name`';
+        $sql = 'SELECT `id`, `name` AS `other_name`';
 
         $stm = new Select(['id', 'name as other_name']);
 
